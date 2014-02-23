@@ -59,6 +59,20 @@ follows:
 require 'bigcommerce'
 
 api = Bigcommerce::Api.new({
+	:store_hash 	=> 'x23wlik',
+	:client_id  	=> 'wcC8XpJ7bCMrqOtWtu04CISNfQuRHhAc',
+	:client_secret	=> 'x5ZCMNG4G7hMwq36pUF9rnKPFy7oNL24',
+	:access_token	=> 'PtwZOPlUEw95RuLeFxxQYXSrCz39cW5PBc4z8ZbWJ8RrMd41dSgFpGKXutpD33FM'
+})
+```
+NOTE: You do not need extra SSL certificates when connecting to the OAuth version
+
+To use the API client with the legacy credentials:
+
+```
+require 'bigcommerce'
+
+api = Bigcommerce::Api.new({
 	:store_url => "https://store.mybigcommerce.com",
 	:username  => "admin",
 	:api_key   => "d81aada4c19c34d913e18f07fd7f36ca"
