@@ -89,11 +89,11 @@ module Bigcommerce
     end
 
     def request_oauth(method, path, options, headers={})
-
       uri = File.join((ENV['BC_API_ENDPOINT'] || 'https://api.bigcommerce.com'), '/stores', @configuration[:store_hash], '/v2', path)
       rest_client = RestClient::Resource.new uri.to_s, {
           headers: headers.merge({'X-Auth-Client' => @configuration[:client_id],
-                                  'X-Auth-Token' => @configuration[:access_token]
+                                  'X-Auth-Token' => @configuration[:access_token],
+                                  'Accept' => 'application/json'
                                  })
       }
 
