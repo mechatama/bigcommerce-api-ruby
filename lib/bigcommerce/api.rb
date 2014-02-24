@@ -42,6 +42,10 @@ module Bigcommerce
       @connection.get '/time'
     end
 
+    def store_information
+      @connection.get '/store'
+    end
+
     def brands(options={})
       @connection.get("/brands", options)
     end
